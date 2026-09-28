@@ -1,25 +1,24 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const dana = localFont({
     src: [
-        { path: "./fonts/DanaFaNum-Light.woff2", weight: "400" },
+        { path: "./fonts/DanaFaNum-Light.woff2", weight: "300" },
+        { path: "./fonts/DanaFaNum-Regular.woff2", weight: "400" },
+        { path: "./fonts/DanaFaNum-Medium.woff2", weight: "500" },
+        { path: "./fonts/DanaFaNum-SemiBold.woff2", weight: "600" },
         { path: "./fonts/DanaFaNum-Bold.woff2", weight: "700" },
     ],
     variable: "--font-dana",
     display: "swap",
 });
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
+const montserrat = localFont({
+    src: "./fonts/Montserrat-Latin.woff2",
+    variable: "--font-montserrat",
+    weight: "400 700",
+    display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <html
             lang="fa"
             dir="rtl"
-            className={`${dana.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+            className={`${dana.variable} ${montserrat.variable} h-full antialiased`}
         >
             <body className="min-h-full flex flex-col">{children}</body>
         </html>
