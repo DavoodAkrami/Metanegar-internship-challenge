@@ -1,28 +1,168 @@
 @import "tailwindcss";
 
 :root {
+    /* Tapsi Primary Brand Color */
+    --brand-primary: #ff6136;
+
+    /* Tapsi Secondary Brand Colors */
+    --brand-red: #ed2d20;
+    --brand-green: #00b15d;
+    --brand-turquoise: #6ce0d2;
+    --brand-purple: #8942a7;
+    --brand-brown: #a06f3f;
+    --brand-yellow: #f4bc49;
+    --brand-blue: #2166f4;
+
+    /* Tapsi Primary Extended Palette */
+    --brand-primary-strong: #e6552d;
+    --brand-primary-hover: #f45b32;
+    --brand-primary-soft: #feaf99;
+    --brand-primary-muted: #fecec1;
+    --brand-primary-subtle: #faeae9;
+
+    /* Tapsi Semantic Extended Palette */
+    --brand-red-strong: #db211b;
+    --brand-red-soft: #f69792;
+    --brand-red-subtle: #ffeaed;
+
+    --brand-green-strong: #009048;
+    --brand-green-soft: #97d7ae;
+    --brand-green-subtle: #e5f5eb;
+
+    --brand-yellow-strong: #efa542;
+    --brand-yellow-soft: #f9d250;
+    --brand-yellow-subtle: #fef7c8;
+
+    --brand-blue-strong: #157aff;
+    --brand-blue-soft: #8dd0ff;
+    --brand-blue-subtle: #e3f4ff;
+
+    /* Surfaces */
     --background: #ffffff;
+    --surface-primary: #ffffff;
+    --surface-secondary: #f7f7f7;
+
+    /* Content */
     --foreground: #171717;
-    --primary-color: #ff6136;
-    
+    --text-primary: #171717;
+    --text-secondary: #6b6b6b;
+    --text-disabled: #a3a3a3;
+    --text-inverse: #ffffff;
+
+    /* Borders */
+    --border-default: #e5e5e5;
+    --border-focus: var(--brand-primary);
+
+    /* Semantic */
+    --success: var(--brand-green);
+    --error: var(--brand-red);
+    --warning: var(--brand-yellow);
+    --info: var(--brand-blue);
+
+    /* UI Spacing
+    Based on the Tapsi T-Unit principle. */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
 }
 
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
+    /* Colors */
     --font-sans: var(--font-dana);
+    --font-mono: var(--font-geist-mono);
+
+    --color-brand-primary: var(--brand-primary);
+    --color-brand-primary-strong: var(--brand-primary-strong);
+    --color-brand-primary-hover: var(--brand-primary-hover);
+    --color-brand-primary-soft: var(--brand-primary-soft);
+    --color-brand-primary-muted: var(--brand-primary-muted);
+    --color-brand-primary-subtle: var(--brand-primary-subtle);
+
+    --color-brand-red: var(--brand-red);
+    --color-brand-red-strong: var(--brand-red-strong);
+    --color-brand-red-soft: var(--brand-red-soft);
+    --color-brand-red-subtle: var(--brand-red-subtle);
+
+    --color-brand-green: var(--brand-green);
+    --color-brand-green-strong: var(--brand-green-strong);
+    --color-brand-green-soft: var(--brand-green-soft);
+    --color-brand-green-subtle: var(--brand-green-subtle);
+
+    --color-brand-turquoise: var(--brand-turquoise);
+    --color-brand-purple: var(--brand-purple);
+    --color-brand-brown: var(--brand-brown);
+
+    --color-brand-yellow: var(--brand-yellow);
+    --color-brand-yellow-strong: var(--brand-yellow-strong);
+    --color-brand-yellow-soft: var(--brand-yellow-soft);
+    --color-brand-yellow-subtle: var(--brand-yellow-subtle);
+
+    --color-brand-blue: var(--brand-blue);
+    --color-brand-blue-strong: var(--brand-blue-strong);
+    --color-brand-blue-soft: var(--brand-blue-soft);
+    --color-brand-blue-subtle: var(--brand-blue-subtle);
+
+    --color-surface-primary: var(--surface-primary);
+    --color-surface-secondary: var(--surface-secondary);
+
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-text-disabled: var(--text-disabled);
+    --color-text-inverse: var(--text-inverse);
+
+    --color-border-default: var(--border-default);
+    --color-border-focus: var(--border-focus);
+
+    --color-success: var(--success);
+    --color-error: var(--error);
+    --color-warning: var(--warning);
+    --color-info: var(--info);
+
+    /* Typography */
+    --font-sans: var(--font-dana);
+    --font-dana: var(--font-dana);
+    --font-montserrat: var(--font-montserrat);
     --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
+html {
+    direction: rtl;
 }
 
 body {
+    min-height: 100vh;
     background: var(--background);
-    color: var(--foreground);
+    color: var(--text-primary);
     font-family: var(--font-dana), Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
