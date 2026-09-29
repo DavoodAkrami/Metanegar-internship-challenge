@@ -74,7 +74,7 @@
     --space-20: 5rem;
     --space-24: 6rem;
 
-    --tapsi-typography-font-family: var(--font-dana), var(--font-montserrat), sans-serif;
+    --tapsi-typography-font-family: var(--font-montserrat), var(--font-dana), sans-serif;
 
     --tapsi-typography-body-xs-font: var(--tapsi-typography-font-family);
     --tapsi-typography-body-xs-size: 0.75rem;
@@ -147,7 +147,7 @@
 
 @theme inline {
     /* Colors */
-    --font-sans: var(--font-dana), var(--font-montserrat);
+    --font-sans: var(--font-montserrat), var(--font-dana);
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
     --color-brand-primary: var(--brand-primary);
@@ -198,9 +198,7 @@
     --color-info: var(--info);
 
     /* Typography */
-    --font-sans: var(--font-dana), var(--font-montserrat);
-    --font-dana: var(--font-dana);
-    --font-montserrat: var(--font-montserrat);
+    --font-sans: var(--font-montserrat), var(--font-dana);
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -212,13 +210,9 @@ body {
     min-height: 100vh;
     background: var(--background);
     color: var(--text-primary);
-    font-family: var(--font-dana), var(--font-montserrat), Arial, Helvetica, sans-serif;
+    font-family: var(--font-montserrat), var(--font-dana), Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-}
-
-body :lang(en) {
-    font-family: var(--font-montserrat), var(--font-dana), Arial, Helvetica, sans-serif;
 }
 
 button,
