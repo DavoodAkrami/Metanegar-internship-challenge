@@ -14,241 +14,212 @@
     --brand-blue: #2166f4;
 
     /* Tapsi Primary Extended Palette */
-    --brand-primary-strong: #e6552d;
-    --brand-primary-hover: #f45b32;
-    --brand-primary-soft: #feaf99;
-    --brand-primary-muted: #fecec1;
-    --brand-primary-subtle: #faeae9;
+    --brand-orange-1: #bd4322;
+    --brand-orange-2: #d74e29;
+    --brand-orange-3: #e6552d;
+    --brand-orange-4: #f45b32;
+    --brand-orange-5: #ff6236;
+    --brand-orange-6: #fe7852;
+    --brand-orange-7: #fe9071;
+    --brand-orange-8: #feaf99;
+    --brand-orange-9: #fecec1;
+    --brand-orange-10: #faeae9;
 
-    /* Tapsi Semantic Extended Palette */
-    --brand-red-strong: #db211b;
-    --brand-red-soft: #f69792;
-    --brand-red-subtle: #ffeaed;
+    /* Tapsi Extended Palette */
+    --brand-red-1: #c00000;
+    --brand-red-2: #ce1612;
+    --brand-red-3: #db211b;
+    --brand-red-4: #ed2e20;
+    --brand-red-5: #fb3a1e;
+    --brand-red-6: #f74c40;
+    --brand-red-7: #ee6e68;
+    --brand-red-8: #f69792;
+    --brand-red-9: #ffcbce;
+    --brand-red-10: #ffeaed;
 
-    --brand-green-strong: #009048;
-    --brand-green-soft: #97d7ae;
-    --brand-green-subtle: #e5f5eb;
+    --brand-green-1: #005f28;
+    --brand-green-2: #007e3d;
+    --brand-green-3: #009048;
+    --brand-green-4: #00a254;
+    --brand-green-5: #00b15e;
+    --brand-green-6: #43bd76;
+    --brand-green-7: #6ac98e;
+    --brand-green-8: #97d7ae;
+    --brand-green-9: #c0e7cd;
+    --brand-green-10: #e5f5eb;
 
-    --brand-yellow-strong: #efa542;
-    --brand-yellow-soft: #f9d250;
-    --brand-yellow-subtle: #fef7c8;
+    --brand-yellow-1: #e67f36;
+    --brand-yellow-2: #efa542;
+    --brand-yellow-3: #f4bb49;
+    --brand-yellow-4: #f9d250;
+    --brand-yellow-5: #fae153;
+    --brand-yellow-6: #fce669;
+    --brand-yellow-7: #fdeb82;
+    --brand-yellow-8: #fef1a4;
+    --brand-yellow-9: #fef7c8;
+    --brand-yellow-10: #fffce9;
 
-    --brand-blue-strong: #157aff;
-    --brand-blue-soft: #8dd0ff;
-    --brand-blue-subtle: #e3f4ff;
+    --brand-brown-1: #522503;
+    --brand-brown-2: #61330e;
+    --brand-brown-3: #6e4114;
+    --brand-brown-4: #7e4e1d;
+    --brand-brown-5: #895823;
+    --brand-brown-6: #a0703f;
+    --brand-brown-7: #b7885b;
+    --brand-brown-8: #d6a880;
+    --brand-brown-9: #f2c9a2;
+    --brand-brown-10: #ffe8c1;
 
-    /* Surfaces */
-    --background: #ffffff;
-    --surface-primary: #ffffff;
-    --surface-secondary: #f7f7f7;
+    --brand-turquoise-1: #006951;
+    --brand-turquoise-2: #00866f;
+    --brand-turquoise-3: #00977f;
+    --brand-turquoise-4: #00a890;
+    --brand-turquoise-5: #00b79e;
+    --brand-turquoise-6: #00c4af;
+    --brand-turquoise-7: #05d1bf;
+    --brand-turquoise-8: #6ce0d2;
+    --brand-turquoise-9: #abece4;
+    --brand-turquoise-10: #def7f5;
 
-    /* Content */
-    --foreground: #171717;
-    --text-primary: #171717;
-    --text-secondary: #6b6b6b;
-    --text-disabled: #a3a3a3;
-    --text-inverse: #ffffff;
+    --brand-purple-1: #3f2979;
+    --brand-purple-2: #5b328c;
+    --brand-purple-3: #6a3796;
+    --brand-purple-4: #7c3da0;
+    --brand-purple-5: #8942a7;
+    --brand-purple-6: #9958b5;
+    --brand-purple-7: #ab74c2;
+    --brand-purple-8: #c39ad4;
+    --brand-purple-9: #dac2e5;
+    --brand-purple-10: #f0e6f4;
 
-    /* Borders */
-    --border-default: #e5e5e5;
-    --border-focus: var(--brand-primary);
+    --brand-blue-1: #2c44d5;
+    --brand-blue-2: #2167f4;
+    --brand-blue-3: #157aff;
+    --brand-blue-4: #008eff;
+    --brand-blue-5: #009eff;
+    --brand-blue-6: #1badff;
+    --brand-blue-7: #55bdff;
+    --brand-blue-8: #8dd0ff;
+    --brand-blue-9: #bce2ff;
+    --brand-blue-10: #e3f4ff;
 
-    /* Semantic */
-    --success: var(--brand-green);
-    --error: var(--brand-red);
-    --warning: var(--brand-yellow);
-    --info: var(--brand-blue);
-
-    /* UI Spacing
-    Based on the Tapsi T-Unit principle. */
-    --space-1: 0.25rem;
-    --space-2: 0.5rem;
-    --space-3: 0.75rem;
-    --space-4: 1rem;
-    --space-5: 1.25rem;
-    --space-6: 1.5rem;
-    --space-8: 2rem;
-    --space-10: 2.5rem;
-    --space-12: 3rem;
-    --space-16: 4rem;
-    --space-20: 5rem;
-    --space-24: 6rem;
-
-    --tapsi-typography-font-family: var(--font-montserrat), var(--font-dana), sans-serif;
-
-    --tapsi-typography-body-xs-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-body-xs-size: 0.75rem;
-    --tapsi-typography-body-xs-height: 1.6666666667;
-    --tapsi-typography-body-xs-weight: 400;
-    --tapsi-typography-body-sm-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-body-sm-size: 0.875rem;
-    --tapsi-typography-body-sm-height: 1.7142857143;
-    --tapsi-typography-body-sm-weight: 400;
-    --tapsi-typography-body-md-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-body-md-size: 1rem;
-    --tapsi-typography-body-md-height: 1.75;
-    --tapsi-typography-body-md-weight: 400;
-    --tapsi-typography-body-lg-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-body-lg-size: 1.125rem;
-    --tapsi-typography-body-lg-height: 1.7777777778;
-    --tapsi-typography-body-lg-weight: 400;
-
-    --tapsi-typography-label-xxs-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-label-xxs-size: 0.625rem;
-    --tapsi-typography-label-xxs-height: 1.6;
-    --tapsi-typography-label-xxs-weight: 500;
-    --tapsi-typography-label-xs-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-label-xs-size: 0.75rem;
-    --tapsi-typography-label-xs-height: 2;
-    --tapsi-typography-label-xs-weight: 500;
-    --tapsi-typography-label-sm-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-label-sm-size: 0.875rem;
-    --tapsi-typography-label-sm-height: 1.7142857143;
-    --tapsi-typography-label-sm-weight: 500;
-    --tapsi-typography-label-md-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-label-md-size: 1rem;
-    --tapsi-typography-label-md-height: 1.75;
-    --tapsi-typography-label-md-weight: 500;
-    --tapsi-typography-label-lg-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-label-lg-size: 1.125rem;
-    --tapsi-typography-label-lg-height: 1.7777777778;
-    --tapsi-typography-label-lg-weight: 500;
-
-    --tapsi-typography-headline-xs-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-headline-xs-size: 1rem;
-    --tapsi-typography-headline-xs-height: 1.5;
-    --tapsi-typography-headline-xs-weight: 600;
-    --tapsi-typography-headline-sm-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-headline-sm-size: 1.25rem;
-    --tapsi-typography-headline-sm-height: 1.5;
-    --tapsi-typography-headline-sm-weight: 600;
-    --tapsi-typography-headline-md-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-headline-md-size: 1.5rem;
-    --tapsi-typography-headline-md-height: 1.5;
-    --tapsi-typography-headline-md-weight: 600;
-    --tapsi-typography-headline-lg-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-headline-lg-size: 1.75rem;
-    --tapsi-typography-headline-lg-height: 1.5;
-    --tapsi-typography-headline-lg-weight: 600;
-
-    --tapsi-typography-display-sm-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-display-sm-size: 2rem;
-    --tapsi-typography-display-sm-height: 1.5;
-    --tapsi-typography-display-sm-weight: 600;
-    --tapsi-typography-display-md-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-display-md-size: 2.5rem;
-    --tapsi-typography-display-md-height: 1.5;
-    --tapsi-typography-display-md-weight: 600;
-    --tapsi-typography-display-lg-font: var(--tapsi-typography-font-family);
-    --tapsi-typography-display-lg-size: 3rem;
-    --tapsi-typography-display-lg-height: 1.5;
-    --tapsi-typography-display-lg-weight: 600;
+    /* Tapsi Typography Colors */
+    --brand-black: #000000;
+    --brand-white: #ffffff;
 }
 
 @theme inline {
-    /* Colors */
+    /* Tapsi Primary Brand Color */
     --color-brand-primary: var(--brand-primary);
-    --color-brand-primary-strong: var(--brand-primary-strong);
-    --color-brand-primary-hover: var(--brand-primary-hover);
-    --color-brand-primary-soft: var(--brand-primary-soft);
-    --color-brand-primary-muted: var(--brand-primary-muted);
-    --color-brand-primary-subtle: var(--brand-primary-subtle);
 
+    /* Tapsi Secondary Brand Colors */
     --color-brand-red: var(--brand-red);
-    --color-brand-red-strong: var(--brand-red-strong);
-    --color-brand-red-soft: var(--brand-red-soft);
-    --color-brand-red-subtle: var(--brand-red-subtle);
-
     --color-brand-green: var(--brand-green);
-    --color-brand-green-strong: var(--brand-green-strong);
-    --color-brand-green-soft: var(--brand-green-soft);
-    --color-brand-green-subtle: var(--brand-green-subtle);
-
     --color-brand-turquoise: var(--brand-turquoise);
     --color-brand-purple: var(--brand-purple);
     --color-brand-brown: var(--brand-brown);
-
     --color-brand-yellow: var(--brand-yellow);
-    --color-brand-yellow-strong: var(--brand-yellow-strong);
-    --color-brand-yellow-soft: var(--brand-yellow-soft);
-    --color-brand-yellow-subtle: var(--brand-yellow-subtle);
-
     --color-brand-blue: var(--brand-blue);
-    --color-brand-blue-strong: var(--brand-blue-strong);
-    --color-brand-blue-soft: var(--brand-blue-soft);
-    --color-brand-blue-subtle: var(--brand-blue-subtle);
 
-    --color-surface-primary: var(--surface-primary);
-    --color-surface-secondary: var(--surface-secondary);
+    /* Tapsi Extended Primary Palette */
+    --color-brand-orange-1: var(--brand-orange-1);
+    --color-brand-orange-2: var(--brand-orange-2);
+    --color-brand-orange-3: var(--brand-orange-3);
+    --color-brand-orange-4: var(--brand-orange-4);
+    --color-brand-orange-5: var(--brand-orange-5);
+    --color-brand-orange-6: var(--brand-orange-6);
+    --color-brand-orange-7: var(--brand-orange-7);
+    --color-brand-orange-8: var(--brand-orange-8);
+    --color-brand-orange-9: var(--brand-orange-9);
+    --color-brand-orange-10: var(--brand-orange-10);
 
-    --color-text-primary: var(--text-primary);
-    --color-text-secondary: var(--text-secondary);
-    --color-text-disabled: var(--text-disabled);
-    --color-text-inverse: var(--text-inverse);
+    /* Tapsi Extended Red Palette */
+    --color-brand-red-1: var(--brand-red-1);
+    --color-brand-red-2: var(--brand-red-2);
+    --color-brand-red-3: var(--brand-red-3);
+    --color-brand-red-4: var(--brand-red-4);
+    --color-brand-red-5: var(--brand-red-5);
+    --color-brand-red-6: var(--brand-red-6);
+    --color-brand-red-7: var(--brand-red-7);
+    --color-brand-red-8: var(--brand-red-8);
+    --color-brand-red-9: var(--brand-red-9);
+    --color-brand-red-10: var(--brand-red-10);
 
-    --color-border-default: var(--border-default);
-    --color-border-focus: var(--border-focus);
+    /* Tapsi Extended Yellow Palette */
+    --color-brand-yellow-1: var(--brand-yellow-1);
+    --color-brand-yellow-2: var(--brand-yellow-2);
+    --color-brand-yellow-3: var(--brand-yellow-3);
+    --color-brand-yellow-4: var(--brand-yellow-4);
+    --color-brand-yellow-5: var(--brand-yellow-5);
+    --color-brand-yellow-6: var(--brand-yellow-6);
+    --color-brand-yellow-7: var(--brand-yellow-7);
+    --color-brand-yellow-8: var(--brand-yellow-8);
+    --color-brand-yellow-9: var(--brand-yellow-9);
+    --color-brand-yellow-10: var(--brand-yellow-10);
 
-    --color-success: var(--success);
-    --color-error: var(--error);
-    --color-warning: var(--warning);
-    --color-info: var(--info);
+    /* Tapsi Extended Brown Palette */
+    --color-brand-brown-1: var(--brand-brown-1);
+    --color-brand-brown-2: var(--brand-brown-2);
+    --color-brand-brown-3: var(--brand-brown-3);
+    --color-brand-brown-4: var(--brand-brown-4);
+    --color-brand-brown-5: var(--brand-brown-5);
+    --color-brand-brown-6: var(--brand-brown-6);
+    --color-brand-brown-7: var(--brand-brown-7);
+    --color-brand-brown-8: var(--brand-brown-8);
+    --color-brand-brown-9: var(--brand-brown-9);
+    --color-brand-brown-10: var(--brand-brown-10);
 
-    /* Typography */
-    --font-sans: var(--font-montserrat), var(--font-dana);
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* Tapsi Extended Green Palette */
+    --color-brand-green-1: var(--brand-green-1);
+    --color-brand-green-2: var(--brand-green-2);
+    --color-brand-green-3: var(--brand-green-3);
+    --color-brand-green-4: var(--brand-green-4);
+    --color-brand-green-5: var(--brand-green-5);
+    --color-brand-green-6: var(--brand-green-6);
+    --color-brand-green-7: var(--brand-green-7);
+    --color-brand-green-8: var(--brand-green-8);
+    --color-brand-green-9: var(--brand-green-9);
+    --color-brand-green-10: var(--brand-green-10);
 
-    /* Body */
-    --text-body-xs: var(--tapsi-typography-body-xs-size);
-    --text-body-xs--line-height: var(--tapsi-typography-body-xs-height);
+    /* Tapsi Extended Turquoise Palette */
+    --color-brand-turquoise-1: var(--brand-turquoise-1);
+    --color-brand-turquoise-2: var(--brand-turquoise-2);
+    --color-brand-turquoise-3: var(--brand-turquoise-3);
+    --color-brand-turquoise-4: var(--brand-turquoise-4);
+    --color-brand-turquoise-5: var(--brand-turquoise-5);
+    --color-brand-turquoise-6: var(--brand-turquoise-6);
+    --color-brand-turquoise-7: var(--brand-turquoise-7);
+    --color-brand-turquoise-8: var(--brand-turquoise-8);
+    --color-brand-turquoise-9: var(--brand-turquoise-9);
+    --color-brand-turquoise-10: var(--brand-turquoise-10);
 
-    --text-body-sm: var(--tapsi-typography-body-sm-size);
-    --text-body-sm--line-height: var(--tapsi-typography-body-sm-height);
+    /* Tapsi Extended Purple Palette */
+    --color-brand-purple-1: var(--brand-purple-1);
+    --color-brand-purple-2: var(--brand-purple-2);
+    --color-brand-purple-3: var(--brand-purple-3);
+    --color-brand-purple-4: var(--brand-purple-4);
+    --color-brand-purple-5: var(--brand-purple-5);
+    --color-brand-purple-6: var(--brand-purple-6);
+    --color-brand-purple-7: var(--brand-purple-7);
+    --color-brand-purple-8: var(--brand-purple-8);
+    --color-brand-purple-9: var(--brand-purple-9);
+    --color-brand-purple-10: var(--brand-purple-10);
 
-    --text-body-md: var(--tapsi-typography-body-md-size);
-    --text-body-md--line-height: var(--tapsi-typography-body-md-height);
+    /* Tapsi Extended Blue Palette */
+    --color-brand-blue-1: var(--brand-blue-1);
+    --color-brand-blue-2: var(--brand-blue-2);
+    --color-brand-blue-3: var(--brand-blue-3);
+    --color-brand-blue-4: var(--brand-blue-4);
+    --color-brand-blue-5: var(--brand-blue-5);
+    --color-brand-blue-6: var(--brand-blue-6);
+    --color-brand-blue-7: var(--brand-blue-7);
+    --color-brand-blue-8: var(--brand-blue-8);
+    --color-brand-blue-9: var(--brand-blue-9);
+    --color-brand-blue-10: var(--brand-blue-10);
 
-    --text-body-lg: var(--tapsi-typography-body-lg-size);
-    --text-body-lg--line-height: var(--tapsi-typography-body-lg-height);
-
-    /* Label */
-    --text-label-xxs: var(--tapsi-typography-label-xxs-size);
-    --text-label-xxs--line-height: var(--tapsi-typography-label-xxs-height);
-
-    --text-label-xs: var(--tapsi-typography-label-xs-size);
-    --text-label-xs--line-height: var(--tapsi-typography-label-xs-height);
-
-    --text-label-sm: var(--tapsi-typography-label-sm-size);
-    --text-label-sm--line-height: var(--tapsi-typography-label-sm-height);
-
-    --text-label-md: var(--tapsi-typography-label-md-size);
-    --text-label-md--line-height: var(--tapsi-typography-label-md-height);
-
-    --text-label-lg: var(--tapsi-typography-label-lg-size);
-    --text-label-lg--line-height: var(--tapsi-typography-label-lg-height);
-
-    /* Headline */
-    --text-headline-xs: var(--tapsi-typography-headline-xs-size);
-    --text-headline-xs--line-height: var(--tapsi-typography-headline-xs-height);
-
-    --text-headline-sm: var(--tapsi-typography-headline-sm-size);
-    --text-headline-sm--line-height: var(--tapsi-typography-headline-sm-height);
-
-    --text-headline-md: var(--tapsi-typography-headline-md-size);
-    --text-headline-md--line-height: var(--tapsi-typography-headline-md-height);
-
-    --text-headline-lg: var(--tapsi-typography-headline-lg-size);
-    --text-headline-lg--line-height: var(--tapsi-typography-headline-lg-height);
-
-    /* Display */
-    --text-display-sm: var(--tapsi-typography-display-sm-size);
-    --text-display-sm--line-height: var(--tapsi-typography-display-sm-height);
-
-    --text-display-md: var(--tapsi-typography-display-md-size);
-    --text-display-md--line-height: var(--tapsi-typography-display-md-height);
-
-    --text-display-lg: var(--tapsi-typography-display-lg-size);
-    --text-display-lg--line-height: var(--tapsi-typography-display-lg-height);
+    /* Tapsi Typography Colors */
+    --color-brand-black: var(--brand-black);
+    --color-brand-white: var(--brand-white);
 }
 
 html {
@@ -257,10 +228,9 @@ html {
 
 body {
     min-height: 100vh;
-    background: var(--background);
-    color: var(--text-primary);
+    background: var(--brand-white);
+    color: var(--brand-black);
     font-family: var(--font-dana), var(--font-montserrat), Arial, Helvetica, sans-serif;
-    text-rendering: optimizeLegibility;
 }
 
 :lang(en) {
@@ -276,10 +246,6 @@ textarea {
 
 button {
     cursor: pointer;
-}
-
-button:disabled {
-    cursor: not-allowed;
 }
 
 img {
