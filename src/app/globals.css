@@ -147,9 +147,6 @@
 
 @theme inline {
     /* Colors */
-    --font-sans: var(--font-montserrat), var(--font-dana);
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
     --color-brand-primary: var(--brand-primary);
     --color-brand-primary-strong: var(--brand-primary-strong);
     --color-brand-primary-hover: var(--brand-primary-hover);
@@ -200,6 +197,58 @@
     /* Typography */
     --font-sans: var(--font-montserrat), var(--font-dana);
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    /* Body */
+    --text-body-xs: var(--tapsi-typography-body-xs-size);
+    --text-body-xs--line-height: var(--tapsi-typography-body-xs-height);
+
+    --text-body-sm: var(--tapsi-typography-body-sm-size);
+    --text-body-sm--line-height: var(--tapsi-typography-body-sm-height);
+
+    --text-body-md: var(--tapsi-typography-body-md-size);
+    --text-body-md--line-height: var(--tapsi-typography-body-md-height);
+
+    --text-body-lg: var(--tapsi-typography-body-lg-size);
+    --text-body-lg--line-height: var(--tapsi-typography-body-lg-height);
+
+    /* Label */
+    --text-label-xxs: var(--tapsi-typography-label-xxs-size);
+    --text-label-xxs--line-height: var(--tapsi-typography-label-xxs-height);
+
+    --text-label-xs: var(--tapsi-typography-label-xs-size);
+    --text-label-xs--line-height: var(--tapsi-typography-label-xs-height);
+
+    --text-label-sm: var(--tapsi-typography-label-sm-size);
+    --text-label-sm--line-height: var(--tapsi-typography-label-sm-height);
+
+    --text-label-md: var(--tapsi-typography-label-md-size);
+    --text-label-md--line-height: var(--tapsi-typography-label-md-height);
+
+    --text-label-lg: var(--tapsi-typography-label-lg-size);
+    --text-label-lg--line-height: var(--tapsi-typography-label-lg-height);
+
+    /* Headline */
+    --text-headline-xs: var(--tapsi-typography-headline-xs-size);
+    --text-headline-xs--line-height: var(--tapsi-typography-headline-xs-height);
+
+    --text-headline-sm: var(--tapsi-typography-headline-sm-size);
+    --text-headline-sm--line-height: var(--tapsi-typography-headline-sm-height);
+
+    --text-headline-md: var(--tapsi-typography-headline-md-size);
+    --text-headline-md--line-height: var(--tapsi-typography-headline-md-height);
+
+    --text-headline-lg: var(--tapsi-typography-headline-lg-size);
+    --text-headline-lg--line-height: var(--tapsi-typography-headline-lg-height);
+
+    /* Display */
+    --text-display-sm: var(--tapsi-typography-display-sm-size);
+    --text-display-sm--line-height: var(--tapsi-typography-display-sm-height);
+
+    --text-display-md: var(--tapsi-typography-display-md-size);
+    --text-display-md--line-height: var(--tapsi-typography-display-md-height);
+
+    --text-display-lg: var(--tapsi-typography-display-lg-size);
+    --text-display-lg--line-height: var(--tapsi-typography-display-lg-height);
 }
 
 html {
@@ -210,9 +259,12 @@ body {
     min-height: 100vh;
     background: var(--background);
     color: var(--text-primary);
-    font-family: var(--font-montserrat), var(--font-dana), Arial, Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
+    font-family: var(--font-dana), var(--font-montserrat), Arial, Helvetica, sans-serif;
     text-rendering: optimizeLegibility;
+}
+
+:lang(en) {
+    font-family: var(--font-montserrat), var(--font-dana), Arial, Helvetica, sans-serif;
 }
 
 button,
