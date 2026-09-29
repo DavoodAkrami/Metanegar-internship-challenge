@@ -2,7 +2,7 @@
 import clsx from "clsx";
 import type React from "react";
 
-type ButtonProps = React.ComponentPropsWithRef<"button"> & {
+export type ButtonProps = React.ComponentPropsWithRef<"button"> & {
     variant?: "primary" | "secondary" | "danger";
     size?: "sm" | "md" | "lg";
     appearance?: "filled" | "outline";
@@ -46,13 +46,13 @@ const Button: React.FC<ButtonProps> = ({
     const variantStateClass = variant === "primary"
         ? "enabled:hover:bg-brand-orange-6 enabled:active:bg-brand-orange-7"
         : variant === "secondary"
-            ? "enabled:hover:opacity-80 enabled:active:opacity-100"
+            ? "enabled:hover:bg-brand-black/80 enabled:active:bg-brand-black"
             : "enabled:hover:bg-brand-red-2 enabled:active:bg-brand-red-1";
 
     const outlineClass = variant === "primary"
         ? "border-brand-orange-1 enabled:hover:bg-brand-orange-10 enabled:active:bg-brand-primary"
         : variant === "secondary"
-            ? "border-brand-black enabled:hover:opacity-80 enabled:active:bg-brand-black enabled:active:opacity-100"
+            ? "border-brand-black enabled:hover:border-brand-black/80 enabled:active:bg-brand-black"
             : "border-brand-red-1 enabled:hover:bg-brand-red-10 enabled:active:bg-brand-red-1";
 
     const sizeClass = size === "sm"
