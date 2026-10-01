@@ -4,7 +4,7 @@ import type React from "react";
 
 export type ButtonProps = React.ComponentPropsWithRef<"button"> & {
     variant?: "primary" | "secondary" | "danger";
-    size?: "sm" | "md" | "lg";
+    size?: "xs" | "sm" | "md" | "lg";
     appearance?: "filled" | "outline";
     fullWidth?: boolean;
     loading?: boolean;
@@ -30,7 +30,7 @@ const Button: React.FC<ButtonProps> = ({
     type = "button",
     ...props
 }) => {
-    const iconSizeClass = size === "sm" ? "size-5" : "size-6";
+    const iconSizeClass = size === "xs" ? "size-4" : size === "sm" ? "size-5" : "size-6";
     const iconClassName = clsx(
         "inline-flex shrink-0 items-center justify-center [&>svg]:size-full",
         iconSizeClass,
@@ -55,23 +55,29 @@ const Button: React.FC<ButtonProps> = ({
             ? "border-brand-black enabled:hover:border-brand-black/80 enabled:active:bg-brand-black"
             : "border-brand-red-1 enabled:hover:bg-brand-red-10 enabled:active:bg-brand-red-1";
 
-    const sizeClass = size === "sm"
-        ? "min-h-11 gap-2"
-        : size === "md"
-            ? "min-h-12 gap-2"
-            : "min-h-14 gap-3";
+    const sizeClass = size === "xs"
+        ? "min-h-8 gap-1"
+        : size === "sm"
+            ? "min-h-11 gap-2"
+            : size === "md"
+                ? "min-h-12 gap-2"
+                : "min-h-14 gap-3";
 
-    const paddingClass = size === "sm"
-        ? "px-3 py-2"
-        : size === "md"
-            ? "px-4 py-2.5"
-            : "px-6 py-3";
+    const paddingClass = size === "xs"
+        ? "px-2 py-1"
+        : size === "sm"
+            ? "px-3 py-2"
+            : size === "md"
+                ? "px-4 py-2.5"
+                : "px-6 py-3";
 
-    const iconOnlyClass = size === "sm"
-        ? "size-11"
-        : size === "md"
-            ? "size-12"
-            : "size-14";
+    const iconOnlyClass = size === "xs"
+        ? "size-8"
+        : size === "sm"
+            ? "size-11"
+            : size === "md"
+                ? "size-12"
+                : "size-14";
 
     return (
         <button
