@@ -38,22 +38,34 @@ const Button: React.FC<ButtonProps> = ({
 
     const variantClass = 
         variant === "primary" 
-            ? "bg-brand-primary"
+            ? "bg-brand"
             : variant === "secondary"
-                ? "bg-brand-black"
-                : "bg-brand-red-1";
+                ? "bg-surface-inverse-primary"
+                : "bg-surface-negative";
 
     const variantStateClass = variant === "primary"
-        ? "enabled:hover:bg-brand-orange-6 enabled:active:bg-brand-orange-7"
+        ? "enabled:hover:bg-palette-orange-300 enabled:active:bg-palette-orange-200"
         : variant === "secondary"
-            ? "enabled:hover:bg-brand-black/80 enabled:active:bg-brand-black"
-            : "enabled:hover:bg-brand-red-2 enabled:active:bg-brand-red-1";
+            ? "enabled:hover:bg-surface-inverse-secondary enabled:active:bg-surface-inverse-primary"
+            : "enabled:hover:bg-palette-red-500 enabled:active:bg-surface-negative";
 
     const outlineClass = variant === "primary"
-        ? "border-brand-orange-1 enabled:hover:bg-brand-orange-10 enabled:active:bg-brand-primary"
+        ? "border-brand enabled:hover:bg-surface-secondary enabled:active:bg-brand"
         : variant === "secondary"
-            ? "border-brand-black enabled:hover:border-brand-black/80 enabled:active:bg-brand-black"
-            : "border-brand-red-1 enabled:hover:bg-brand-red-10 enabled:active:bg-brand-red-1";
+            ? "border-border-selected enabled:hover:border-border-inverse-primary enabled:active:bg-surface-inverse-primary"
+            : "border-border-negative text-content-negative enabled:hover:bg-surface-negative-light enabled:active:bg-surface-negative";
+
+    const filledTextClass = variant === "primary"
+        ? "text-content-on-brand"
+        : variant === "secondary"
+            ? "text-content-on-inverse"
+            : "text-content-on-negative";
+
+    const outlineActiveTextClass = variant === "primary"
+        ? "enabled:active:text-content-on-brand"
+        : variant === "secondary"
+            ? "enabled:active:text-content-on-inverse"
+            : "enabled:active:text-content-on-negative";
 
     const sizeClass = size === "xs"
         ? "min-h-8 gap-1"
@@ -86,12 +98,12 @@ const Button: React.FC<ButtonProps> = ({
             disabled={disabled || loading}
             aria-busy={loading || undefined}
             className={clsx(
-                "relative inline-flex max-w-full items-center justify-center rounded-full text-center transition-colors motion-reduce:transition-none",
-                "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-black disabled:cursor-not-allowed disabled:opacity-50",
+                "relative inline-flex max-w-full items-center justify-center rounded-full text-center text-label-md transition-colors motion-reduce:transition-none",
+                "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus disabled:cursor-not-allowed disabled:bg-surface-disabled disabled:text-content-disabled disabled:border-border-primary",
                 sizeClass,
                 appearance === "filled"
-                    ? ["border-0 text-brand-white", variantClass, variantStateClass]
-                    : ["border bg-transparent text-brand-black enabled:active:text-brand-white", outlineClass],
+                    ? ["border-0", filledTextClass, variantClass, variantStateClass]
+                    : ["border bg-transparent", variant !== "danger" && "text-content-primary", outlineActiveTextClass, outlineClass],
                 fullWidth ? "w-full" : iconOnly && iconOnlyClass,
                 iconOnly ? "p-0" : paddingClass,
                 className,

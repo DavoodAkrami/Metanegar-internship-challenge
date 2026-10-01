@@ -44,22 +44,22 @@ const Input: React.FC<InputProps> = ({
     const roundedClass = rounded === "full" ? "rounded-full" : "rounded-lg";
     const appearanceClass = appearance === "default"
         ? [
-            "border bg-brand-white",
+            "border bg-surface-primary",
             hasError
-                ? "border-brand-red-1 focus-within:border-brand-red-1"
-                : "border-brand-black/20 hover:border-brand-black/40 focus-within:border-brand-primary",
+                ? "border-border-negative focus-within:border-border-negative"
+                : "border-border-primary hover:border-border-primary focus-within:border-border-focus",
         ]
         : [
-            "border-0 bg-brand-black/5 focus-within:border",
+            "border-0 bg-surface-secondary focus-within:border",
             hasError
-                ? "focus-within:border-brand-red-1"
-                : "focus-within:border-brand-primary",
+                ? "focus-within:border-border-negative"
+                : "focus-within:border-border-focus",
         ];
 
     return (
         <div className={clsx("flex w-full flex-col gap-2", wrapperClassName)}>
             {hasLabel && (
-                <label htmlFor={inputId} className="text-sm font-medium text-brand-black">
+                <label htmlFor={inputId} className="text-label-sm text-content-primary">
                     {label}
                 </label>
             )}
@@ -68,11 +68,11 @@ const Input: React.FC<InputProps> = ({
                     "flex min-h-12 w-full items-center gap-2 px-4 transition-colors motion-reduce:transition-none",
                     roundedClass,
                     appearanceClass,
-                    disabled && "cursor-not-allowed bg-brand-black/5 opacity-50",
+                    disabled && "cursor-not-allowed bg-surface-disabled",
                 )}
             >
                 {startIcon && (
-                    <span className="flex size-6 shrink-0 items-center justify-center text-brand-black/60 [&>svg]:size-full" aria-hidden="true">
+                    <span className="flex size-6 shrink-0 items-center justify-center text-content-secondary [&>svg]:size-full" aria-hidden="true">
                         {startIcon}
                     </span>
                 )}
@@ -86,18 +86,18 @@ const Input: React.FC<InputProps> = ({
                     aria-describedby={describedBy}
                     aria-invalid={hasError ? true : ariaInvalid}
                     className={clsx(
-                        "min-w-0 flex-1 bg-transparent py-2.5 text-brand-black outline-none placeholder:text-brand-black/50 disabled:cursor-not-allowed",
+                        "min-w-0 flex-1 bg-transparent py-2.5 text-body-md text-content-primary outline-none placeholder:text-content-tertiary disabled:cursor-not-allowed disabled:text-content-disabled disabled:placeholder:text-content-disabled",
                         className,
                     )}
                 />
                 {endIcon && (
-                    <span className="flex size-6 shrink-0 items-center justify-center text-brand-black/60 [&>svg]:size-full" aria-hidden="true">
+                    <span className="flex size-6 shrink-0 items-center justify-center text-content-secondary [&>svg]:size-full" aria-hidden="true">
                         {endIcon}
                     </span>
                 )}
             </div>
             {hasError && (
-                <p id={errorId} role="alert" className="text-sm text-brand-black">
+                <p id={errorId} role="alert" className="text-body-sm text-content-negative">
                     {error}
                 </p>
             )}

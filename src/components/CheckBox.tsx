@@ -30,20 +30,21 @@ const CheckBox: React.FC<CheckBoxProps> = ({
     const hasLabel = label !== undefined && label !== null && label !== false;
 
     const variantClass = variant === "primary"
-        ? "peer-checked:border-brand-orange-1 peer-checked:bg-brand-primary"
-        : "peer-checked:border-brand-black peer-checked:bg-brand-black";
+        ? "peer-checked:border-border-selected peer-checked:bg-brand"
+        : "peer-checked:border-border-selected peer-checked:bg-surface-inverse-primary";
+    const checkedContentClass = variant === "primary" ? "text-content-on-brand" : "text-content-on-inverse";
 
     const sizeClass = size === "sm" ? "size-5" : size === "md" ? "size-6" : "size-7";
 
     return (
         <span className={clsx(
-            "inline-flex min-h-11 max-w-full items-center gap-3 align-middle text-brand-black",
+            "inline-flex min-h-11 max-w-full items-center gap-3 align-middle text-content-primary",
             disabled && "opacity-50",
             wrapperClassName,
         )}>
             <span className={clsx(
                 "relative flex size-11 shrink-0 items-center justify-center rounded-full transition-colors duration-200 ease-out motion-reduce:transition-none",
-                !disabled && "[@media(hover:hover)_and_(pointer:fine)]:hover:bg-brand-black/5",
+                !disabled && "[@media(hover:hover)_and_(pointer:fine)]:hover:bg-surface-secondary",
             )}>
                 <input
                     {...props}
@@ -56,17 +57,18 @@ const CheckBox: React.FC<CheckBoxProps> = ({
                     )}
                 />
                 <span aria-hidden="true" className={clsx(
-                    "pointer-events-none flex items-center justify-center rounded-xs border border-brand-black/60 bg-brand-white text-brand-white",
-                    "peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand-black [&>svg]:opacity-0 peer-checked:[&>svg]:opacity-100",
+                    "pointer-events-none flex items-center justify-center rounded-xs border border-border-selected bg-surface-primary",
+                    "peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-border-focus [&>svg]:opacity-0 peer-checked:[&>svg]:opacity-100",
                     sizeClass,
                     variantClass,
+                    checkedContentClass,
                 )}>
                     <CheckIcon className="size-full p-0.5" />
                 </span>
             </span>
             {hasLabel && (
                 <label htmlFor={inputId} className={clsx(
-                    "flex min-h-11 min-w-0 cursor-pointer items-center text-sm font-medium break-words",
+                    "flex min-h-11 min-w-0 cursor-pointer items-center text-label-sm break-words",
                     disabled && "cursor-not-allowed",
                 )}>
                     {label}

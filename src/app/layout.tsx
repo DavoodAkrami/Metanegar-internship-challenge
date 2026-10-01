@@ -2,22 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const dana = localFont({
-    src: [
-        { path: "./fonts/DanaFaNum-Light.woff2", weight: "300" },
-        { path: "./fonts/DanaFaNum-Regular.woff2", weight: "400" },
-        { path: "./fonts/DanaFaNum-Medium.woff2", weight: "500" },
-        { path: "./fonts/DanaFaNum-SemiBold.woff2", weight: "600" },
-        { path: "./fonts/DanaFaNum-Bold.woff2", weight: "700" },
-    ],
-    variable: "--font-dana",
-    display: "swap",
-});
-
-const montserrat = localFont({
-    src: "./fonts/Montserrat-Latin.woff2",
-    variable: "--font-montserrat",
-    weight: "400 700",
+const vazirmatn = localFont({
+    src: "./fonts/Vazirmatn-Variable.ttf",
+    weight: "100 900",
+    variable: "--font-vazirmatn",
     display: "swap",
 });
 
@@ -31,7 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <html
             lang="fa"
             dir="rtl"
-            className={`${dana.variable} ${montserrat.variable} h-full antialiased`}
+            className={`${vazirmatn.variable} h-full antialiased`}
         >
             <body className="min-h-full flex flex-col">{children}</body>
         </html>

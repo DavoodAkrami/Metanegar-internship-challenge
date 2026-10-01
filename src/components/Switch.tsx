@@ -29,8 +29,8 @@ const Switch: React.FC<SwitchProps> = ({
     const hasLabel = label !== undefined && label !== null && label !== false;
 
     const variantClass = variant === "primary"
-        ? "peer-checked:bg-brand-primary"
-        : "peer-checked:bg-brand-black";
+        ? "peer-checked:bg-brand"
+        : "peer-checked:bg-surface-inverse-primary";
 
     const sizeClass = size === "sm" ? "h-7 w-12" : size === "md" ? "h-8 w-14" : "h-9 w-16";
     const thumbClass = size === "sm"
@@ -41,13 +41,13 @@ const Switch: React.FC<SwitchProps> = ({
 
     return (
         <span className={clsx(
-            "inline-flex min-h-11 max-w-full items-center gap-3 align-middle text-brand-black ltr:flex-row-reverse",
+            "inline-flex min-h-11 max-w-full items-center gap-3 align-middle text-content-primary ltr:flex-row-reverse",
             disabled && "opacity-50",
             wrapperClassName,
         )}>
             {hasLabel && (
                 <label htmlFor={inputId} className={clsx(
-                    "flex min-h-11 min-w-0 cursor-pointer items-center text-sm font-medium break-words",
+                    "flex min-h-11 min-w-0 cursor-pointer items-center text-label-sm break-words",
                     disabled && "cursor-not-allowed",
                 )}>
                     {label}
@@ -66,13 +66,13 @@ const Switch: React.FC<SwitchProps> = ({
                     )}
                 />
                 <span aria-hidden="true" className={clsx(
-                    "pointer-events-none relative rounded-full bg-brand-black/10 transition duration-200 peer-enabled:peer-active:scale-95 motion-reduce:transition-none",
-                    "peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand-black [&_svg]:opacity-0 peer-checked:[&_svg]:opacity-100",
+                    "pointer-events-none relative rounded-full bg-surface-tertiary transition duration-200 peer-enabled:peer-active:scale-95 motion-reduce:transition-none",
+                    "peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-border-focus [&_svg]:opacity-0 peer-checked:[&_svg]:opacity-100",
                     variantClass,
                     sizeClass,
                     thumbClass,
                 )}>
-                    <span className="absolute start-1 top-1 flex items-center justify-center rounded-full bg-brand-white text-brand-black transition-transform duration-200 ease-out motion-reduce:transition-none">
+                    <span className="absolute start-1 top-1 flex items-center justify-center rounded-full bg-surface-primary text-content-primary transition-transform duration-200 ease-out motion-reduce:transition-none">
                         <CheckIcon strokeWidth={2} className="size-full p-0.5" />
                     </span>
                 </span>

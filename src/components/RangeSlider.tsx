@@ -57,15 +57,15 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
     const hasLabel = label !== undefined && label !== null && label !== false;
     const labelId = `${inputId}-label`;
     
-    const fillClass = variant === "primary" ? "fill-brand-primary" : "fill-brand-black";
+    const fillClass = variant === "primary" ? "fill-brand" : "fill-content-primary";
     const thumbClass = variant === "primary"
-        ? "[&::-webkit-slider-thumb]:bg-brand-primary [&::-moz-range-thumb]:bg-brand-primary"
-        : "[&::-webkit-slider-thumb]:bg-brand-black [&::-moz-range-thumb]:bg-brand-black";
+        ? "[&::-webkit-slider-thumb]:bg-brand [&::-moz-range-thumb]:bg-brand"
+        : "[&::-webkit-slider-thumb]:bg-surface-inverse-primary [&::-moz-range-thumb]:bg-surface-inverse-primary";
     const inputClass = clsx(
-        "absolute inset-0 h-11 w-full cursor-pointer appearance-none bg-transparent focus-visible:rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-black disabled:cursor-not-allowed",
+        "absolute inset-0 h-11 w-full cursor-pointer appearance-none bg-transparent focus-visible:rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus disabled:cursor-not-allowed",
         "[&::-webkit-slider-runnable-track]:h-2 [&::-webkit-slider-runnable-track]:bg-transparent [&::-moz-range-track]:h-2 [&::-moz-range-track]:bg-transparent [&::-moz-range-progress]:bg-transparent",
-        "[&::-webkit-slider-thumb]:-mt-2 [&::-webkit-slider-thumb]:size-6 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:ring-brand-black/10 [&::-webkit-slider-thumb]:transition-shadow [&::-webkit-slider-thumb]:duration-200 [&::-webkit-slider-thumb]:motion-reduce:transition-none",
-        "[&::-moz-range-thumb]:size-6 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:ring-brand-black/10 [&::-moz-range-thumb]:transition-shadow [&::-moz-range-thumb]:duration-200",
+        "[&::-webkit-slider-thumb]:-mt-2 [&::-webkit-slider-thumb]:size-6 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:ring-content-primary/10 [&::-webkit-slider-thumb]:transition-shadow [&::-webkit-slider-thumb]:duration-200 [&::-webkit-slider-thumb]:motion-reduce:transition-none",
+        "[&::-moz-range-thumb]:size-6 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:ring-content-primary/10 [&::-moz-range-thumb]:transition-shadow [&::-moz-range-thumb]:duration-200",
         "enabled:hover:[&::-webkit-slider-thumb]:ring-8 enabled:active:[&::-webkit-slider-thumb]:ring-8 enabled:hover:[&::-moz-range-thumb]:ring-8 enabled:active:[&::-moz-range-thumb]:ring-8",
         range && "pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-moz-range-thumb]:pointer-events-auto",
         thumbClass,
@@ -112,14 +112,14 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
         <div className={clsx("flex w-full flex-col gap-2", disabled && "opacity-50", wrapperClassName)}>
             {hasLabel && (
                 range
-                    ? <span id={labelId} className="text-sm font-medium text-brand-black">{label}</span>
-                    : <label htmlFor={inputId} className="text-sm font-medium text-brand-black">{label}</label>
+                    ? <span id={labelId} className="text-label-sm text-content-primary">{label}</span>
+                    : <label htmlFor={inputId} className="text-label-sm text-content-primary">{label}</label>
             )}
             <div
                 className={clsx("relative h-11 w-full", range && !disabled && "cursor-pointer")}
                 onPointerDown={range ? handleTrackPointerDown : undefined}
             >
-                <div className="pointer-events-none absolute inset-x-3 top-1/2 h-2 -translate-y-1/2 overflow-hidden rounded-full bg-brand-black/10">
+                <div className="pointer-events-none absolute inset-x-3 top-1/2 h-2 -translate-y-1/2 overflow-hidden rounded-full bg-surface-tertiary">
                     <svg aria-hidden="true" viewBox="0 0 100 8" preserveAspectRatio="none" className="h-full w-full rtl:rotate-180">
                         <rect x={startPercent} y="0" width={Math.max(0, endPercent - startPercent)} height="8" className={fillClass} />
                     </svg>

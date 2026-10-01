@@ -9,7 +9,7 @@ export type BreadcrumbProps = {
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className }) => {
     return (
-        <nav aria-label="مسیر صفحه" className={clsx("mb-6 text-sm", className)}>
+    <nav aria-label="مسیر صفحه" className={clsx("mb-6 text-label-sm", className)}>
             <ol className="flex flex-wrap items-center">
                 {items.map((item, index) => {
                     const isCurrent = index === items.length - 1;
@@ -18,11 +18,11 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className }) => {
                         <li key={index} aria-current={isCurrent ? "page" : undefined} className="break-words">
                             {index > 0 && <span aria-hidden="true" className="mx-2">/</span>}
                             {item.href && !isCurrent ? (
-                                <Link href={item.href} className="text-brand-black/60 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-black">
+                                <Link href={item.href} className="text-content-secondary focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus">
                                     {item.label}
                                 </Link>
                             ) : (
-                                <span className={isCurrent ? "font-medium" : "text-brand-black/60"}>{item.label}</span>
+                            <span className={isCurrent ? undefined : "text-content-secondary"}>{item.label}</span>
                             )}
                         </li>
                     );
