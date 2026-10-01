@@ -5,7 +5,7 @@ import { useState, useSyncExternalStore } from "react";
 import { ArrowRightIcon, CartIcon } from "@solar-icons/react/linear";
 import Button from "@/components/Button";
 import Header from "@/components/Header";
-import ProductCard from "@/components/productCard";
+import ProductCard from "@/components/ProductCard";
 import { getCartSnapshot, getServerCartSnapshot, parseCart, setCartQuantity, subscribeToCart } from "@/lib/cart";
 
 const CartPage = () => {

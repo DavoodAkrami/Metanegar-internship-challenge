@@ -7,7 +7,7 @@ import Button from "@/components/Button";
 import FilterDrawer from "@/components/FilterDrawer";
 import Header from "@/components/Header";
 import Input from "@/components/Input";
-import ProductCard from "@/components/productCard";
+import ProductCard from "@/components/ProductCard";
 import { products } from "@/data/products";
 import type { Product } from "@/data/products";
 import { addToCart, decreaseProductQuantity, getCartSnapshot, getServerCartSnapshot, parseCart, subscribeToCart } from "@/lib/cart";
